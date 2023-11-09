@@ -54,19 +54,26 @@ int main()
 	srand((unsigned)time(NULL));
 	int s;
 	cout << "s = "; cin >> s;
+
 	int* d = new int[s];
 	int Low = 1;
 	int High = 20;
+
 	Create(d, s, Low, High);
 	cout << "q[s] =";
+
 	Print(d, s);
 	cout << "Sum = " << Sum(d, s) << endl;
 	delete[] d;
+
 	int* c = new int[s];
 	CreateT(c, s, Low, High);
+
 	cout << "q[s] =";
 	PrintT(c, s);
+
 	cout << "Sum = " << SumT(c, s) << endl;
 	delete[] c;
+
 	return 0;
 }
